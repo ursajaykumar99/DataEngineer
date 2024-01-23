@@ -82,6 +82,7 @@ pull:	Combination of both fetch&merge. pull the files from LocalRepository to Wo
 
 diff: To find difference between commits.
 
+
 	git diff							: 	Will gives all the difference in between staged and WorkingRepository.
 	
 	git diff Commitid 					: 	will gives the difference between last staged and commitid.
@@ -95,6 +96,13 @@ diff: To find difference between commits.
 	--Ex	:	git diff Firstcommitid NextCommitid --stat filename.txt
 	
 	
+	Nocommitid	: Modified & Staged(last commitid)
+	
+	commitid1	: Modified & commitid1
+	
+	Commitid2	: Commitid2 & Commitid1
+	
+	
 	git difftool	:	will show case the difference in side by side.
 	
 	
@@ -105,11 +113,15 @@ status:	will gives the Information of state of the file whether its tracked or u
 	git status		:
 	
 	
-History(log) :	To check the History of the working directory.
+log (History) :	To get the Commits of the working directory.
 
 	git log :
 	
-	git log -number :
+	git log -number : only specified number commits only will display.
+	
+	git log filename: will gives the commits that correlated to that filename.
+	
+	
 
 	git log --pretty=ssoneline:
 	
@@ -120,6 +132,17 @@ History(log) :	To check the History of the working directory.
 	git log --pretty=fuller :
 	
 	git log --oneline --graph --all :
+	
+	
+show :	To check the actual change of the commit.
+
+	git show commitid:	will gives the all the changes happend in that commit.
+	
+	git show commitid --stat: status of the changes.
+	
+	git show commitid filename:	specified filename data only will display.
+	
+	git show commitid --stat filename:	status of the specified filename changes.
 	
 	
 alias:	renameing the command or giving the alias name to the command.
