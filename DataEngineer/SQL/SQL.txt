@@ -1,0 +1,263 @@
+Database:
+
+Database is used for to store the data.
+
+Database Management System:
+
+DBMS is used for  store & access the data.
+
+
+Oracle database is the database with the help of sql application or some other application we can access the database.
+			3 types of versions are there 
+				1. Enterprise Edition
+				2. Express Edition 
+				3. Standard Edition 
+			Current using version 21c Express Edition
+
+To access the data, we need sql language. Nt: Here all the languages are not same each database supports each type of language but the all language are 90% similar.
+
+
+-----------------------------------------------------------------------------------------
+
+Commands:
+
+	DDL:
+
+	Create 		:	Create command is used to create the new table,
+	
+	Syntax 		:	1.Create table table_name( columnname1 datatype, columnname2 datatype, .... columnnameN datatype);
+	
+					2. CREATE TABLE TABLENAME AS SELECT * FROM OLD_TABLE_NAME;
+					
+	
+	Alter		:	Alter command is used for to modify the structure of the data.
+		
+		1.Add		:	Add Command is used for to add the new columns;
+		
+		Syntax		:	Alter Table Tablename Add Column_Name Datatype;
+		
+		2.Drop		:	Drop command is used for drop the entire row
+		
+		Syntax		:	ALter table table_name Drop column Column_name;
+		
+		3.Rename	:	Rename is used for to Rename the Tablename and Columns name.
+		
+		Syntax ( Table Name )	:	1.Alter table table_name Rename to NewName. 2.Rename TableName1 to New_TABLENAME. 
+		
+		Syntax ( Column Name )	:	Alter table table_name Rename column old_Name to New_Name.
+		
+		4.Modify	:	tO Modify the column datatypes and constraints;
+		
+		Syntax		:	Alter table table_name Modify column_name datatype;
+		
+	
+	Truncate	:	Truncate is used for  Delete the Entire data but structure will remains.
+	
+	Syntax		:	Truncate table table_name;
+	
+	Drop		:	Drop command is used to delete the entire table along with structure.
+	
+	Syntax		:	Drop table Tablename;
+
+	
+----------------------------------------------------------------------------------------
+
+
+	TCL:
+	
+	Commit		:	Commit Command is used to save
+	
+	
+	Rollback	:	it is like Undo - ( ctrl + z ) - till the last Commit.
+	
+					1.ROLLBACK; 			--	In General.
+					
+					2.ROLLBACK TO A; 		-- 	FOR SAVEPOINT CONCEPT.
+	
+	Savepoint	:	it is like saving till particular location.
+	
+					Savepoint name; 
+					
+----------------------------------------------------------------------------------------				
+	
+	DML:
+
+	INSERT 		:	INSERT Command is used for insert the data into table ,
+	
+	Syntax		:	1.INSERT INTO TABLENAME ( COLUMNNAME1, COLUMNNAME2 , .... , COLUMNNAMEN) VALUES ( VALUE1, VALUE2 .... VALUEN);
+	
+					2.INSERT INTO TABLENAME ( SELECT *  FROM ANOTHER_TABLE_NAME);  			-- Storing the data from the other table
+					
+					3.INSERT INTO TABLENAME ( COLUMNNAME1, COLUMNNAME2 ) SELECT COLUMNNAME1, COLUMNNAME2 FROM OTHER_TABLE;
+					
+	DELETE		:	To DELETE THE DATA FROM THE TABLE by requirements.
+	
+	Syntax		:	1. Delete from TABLENAME WHERE CONDITION;			
+	
+					2. Delete from TABLENAME;							--IF WE DON'T USE WHERE CONDITION ALL THE ROWS WILL BE DELETE. DATA WILL DELETE BUT SPACE WILL NOT DELETE.
+	
+	UPDATE		:	UPDATE Command is used to update the data.
+	
+	Syntax		:	1. Update table_name SET columnname=data where conditions;
+	
+					2. Update table_name SET columnname=data, Columnname2=Data where conditions;
+					
+					3. Update table_name SET columnname=data; 			--If We don't use where condition all the column data will be modify.
+	
+	
+	
+----------------------------------------------------------------------------------------
+	
+	
+	General:
+
+	Tab			:	To View the all tables
+	
+	Syntax		:	Select * from tab;
+	
+	Desc 		:	It gives the structure of the table.
+	
+	Syntax 		: 	Desc table_name;
+	
+	
+	
+----------------------------------------------------------------------------------------
+
+	Constraints	:	Constraints used for Validating the Data Before Inserting.
+	
+	
+	
+	Primary Key	:	It is a combination of UNIQUE and NOT NULL. Mostly used for Identifying a Particular column.
+	
+					A table Consist only one Primary key Constraint Column.
+	
+	Unique		:	data should be Unique. It accepts Null Values also.
+	
+	Not null	:	Data should be present. It accepts Duplicate values also.
+	
+	Check		:	
+	
+	Foreign key	:	Reference of the other table. TO Foreign key already parent table should exist before using foreign key and also need to connect with primary key column.
+	
+	CREATING NEW TABLE WITH CONSTRAINTS:
+	
+	Syntax		:	CREATE TABLE TABLENAME ( SNO NUMBER(10) PRIMARY KEY, NAME VARCHAR2(10) NOT NULL, ROLLNO NUMBER(4) UNIQUE, AGE NUMBER(2) CHECK(AGE>=18),CITY NUMBER(2) REFERENCES TABLENAME(COLUMNNAME),CITY NUMBER(2) REFERENCES TABLENAME(COLUMNNAME) ON DELETE CASCADE);
+
+	ADDING CONSTRAINT TO ALREADY EXISTING TABLE:
+	
+	Syntax		:	ALTER TABLE TABLENAME ADD CONSTRAINTNAME(COLUMNNAME);   -- IN GENERAL
+	
+	Syntax		:	ALTER TABLE TABLENAME ADD CONSTRAINT NAME_FOR_CONSTRAINT FOREIGN KEY (COLUMNNAME) REFERENCES PARENTTABLE(COLUMNNAME)  --- FOREIGN KEY
+	
+	DELETING CONSTRAINT:
+	
+	Syntax		:	ALTER TABLE TABLENAME DROP CONSTRAINT CONSTRAINTNAME;
+	
+	
+	To Find Constraints:
+	
+	Syntax		:	SELECT * FROM ALL_CONSTRAINTS WHERE OWNER='HR' AND TABLENAME='TABLENAME'; --TO FIND THE CONSTRAINT NAME
+	
+					SELECT * FROM ALL_CONS_COLUMNS WHERE OWNER='HR' AND TABLENAME='TABLENAME';
+					
+					Or
+					
+					SELECT * from ALL_CONSTRAINTS A,ALL_CONS_COLUMNS B WHERE A.CONSTRAINTNAME=B.CONSTRAINTNAME AND A.OWNER='HR' AND A.ATABLENAME='CUSTOMER'; 
+	
+	
+	
+
+----------------------------------------------------------------------------------------ing
+
+	Select		:	To retrive data we select command 
+	
+	Syntax		:	Select * from tablename;
+	
+	As			:	Renaming the column name for temporary select statement;
+	
+	Syntax		:	1.Select Columnname as newname from tablename;
+		
+					2.Select columnname newname from tablename;
+					
+	concate 	:	Concatinating two columns as single column (adding)
+	
+	Syntax		:	
+	
+	DISTINCT
+
+	BETWEEN
+	
+	In
+	
+	LIKE
+	
+	AND
+	
+	Or
+	
+	Not
+	
+	IS Null
+	
+	IS NOT Null
+	
+	ROWNUM			: <,<=
+	
+	ROWID
+	
+	
+	
+	
+	
+	SUM
+	
+	AVG
+	
+	MAX
+	
+	MIN 
+	
+	Count
+	
+	
+					
+
+----------------------------------------------------------------------------------------
+	
+ERRORS:n
+
+	Invalid Identifier	: Column name wrong
+	
+	
+IMP Note Points:
+
+	If data is already there we can increase the datatype size, Can't decrease less than existing data size and also we can't change data type if the data exist. 
+	
+	--	In that through following below cases we can acheieve.
+	
+	1.	Back up that Table 
+	
+	2.	Create table with same table 
+			
+	3.	Truncate the Main table
+	
+	4.	update the table with new requirements 
+	
+	5.	after import the data from back up table
+	
+	
+	Difference between truncate and delete
+	
+	Truncate is a DDL Command so we can't ROllback after using DDL. No Where clause.
+	
+	In Delete we Can rollback. Where Clause we can use with delete Command.
+	
+	ROW NUM IS MUTABLE ( WILL CHANGE )
+	ROW ID IS IMMUTABLE ( WILL NOT CHANGE )
+	
+	
+	
+	
+		
+	
+
