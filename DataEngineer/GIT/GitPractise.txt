@@ -1,1 +1,5 @@
-practise1:	GigPractise file adding
+GigPractise file adding
+
+Checking:	Diff
+
+case1:	How git diff will perform?
