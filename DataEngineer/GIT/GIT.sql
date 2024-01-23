@@ -80,15 +80,27 @@ pull:	Combination of both fetch&merge. pull the files from LocalRepository to Wo
 	4.	!file.txt
 
 
-git diff:	To find the difference between last commit to current working state.
+diff: To find difference between commits.
 
-	git diff		: 	will gives all the difference.
+	git diff							: 	Will gives all the difference in between staged and WorkingRepository.
 	
-	git diff --stat	: 	will gives all the difference stat
+	git diff Commitid 					: 	will gives the difference between last staged and commitid.
+	
+	git diff firstcommitid nextcommitid :	will gives the difference between the firstcommitid & nextcommitid.
+	
+	stat	: only status will provide.
+	
+	filename: only gives data related that filename.
+
+	--Ex	:	git diff Firstcommitid NextCommitid --stat filename.txt
+	
 	
 	git difftool	:	will show case the difference in side by side.
 	
-git status:	will gives the Information of state of the file whether its tracked or untracked, Modified or Committed.
+	
+	
+	
+status:	will gives the Information of state of the file whether its tracked or untracked, Modified or Committed.
 
 	git status		:
 	
