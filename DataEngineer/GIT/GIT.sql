@@ -180,7 +180,14 @@ Merge: Commanly there are two types of merge.
 	
 	
 	
-
+	git branch --merge : To check wt branches are merged.
+	
+	git branch --no-merge : To check wt branches are not merged yet.
+	
+	
+-----------------------------------------------------------------------------------------------------------------------
+	
+	
 	
 	
 	
