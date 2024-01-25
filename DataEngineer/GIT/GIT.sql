@@ -152,7 +152,7 @@ alias:	renameing the command or giving the alias name to the command.
 -----------------------------------------------------------------------------------------------------------------------
 	
 	
-GIT Branch: Git branch is nothing but a pointer pointing to separate location.
+Branch: Git branch is nothing but a pointer pointing to separate location.
 
 	git branch	: To get the branch names
 	
@@ -167,6 +167,18 @@ GIT Branch: Git branch is nothing but a pointer pointing to separate location.
 	git branch -d branchname : Deleting a branch.
 	
 	git merge branchname : merging a branch into other main branch.
+	
+	
+Merge: Commanly there are two types of merge.
+
+	1. Fast-Farword Merge
+	2. Recursive Merge
+	
+	Fast-farword Merge	:	If there is no commits happend after the branching then it will come as under Fast-Farword Merge.
+	
+	Recursive Merge : If any commits happend parllarly with branch commints in master then it will be come under Recursive Merge.
+	
+	
 	
 
 	
