@@ -152,7 +152,22 @@ alias:	renameing the command or giving the alias name to the command.
 -----------------------------------------------------------------------------------------------------------------------
 	
 	
+GIT Branch: Git branch is nothing but a pointer pointing to separate location.
 
+	git branch	: To get the branch names
+	
+	git branch -a: all brances in that Git.
+	
+	git branch branchname:	Creating a new branch with branchname.
+	
+	git checkout branchname	:	Shifting to that branch.
+	
+	git checkout -b branchname : Create & shift at a command.
+	
+	git branch -d branchname : Deleting a branch.
+	
+	git merge branchname : merging a branch into other main branch.
+	
 
 	
 	
