@@ -11,3 +11,6 @@ Checking: Merging
 
 
 Case1: Recursive Merging
+
+
+Checking: Add Commit, Push through tortoise git.
