@@ -61,6 +61,9 @@ Push:	Push the files from WorkingRepository to RemoteRepository.
 
 	git push origin master	:	Push to the RemoteRepository master branch.
 	
+	git push origin NewBranch:	To create a new branch in RemoteRepository.
+	
+	
 fetch:	pull the files from RemoteRepository to LocalRepository.
 
 	git fetch				:	Changes will come to the LocalRepository only not to the WorkingRepository.
@@ -72,6 +75,7 @@ merge: pull the files from LocalRepository to WorkingRepository.
 pull:	Combination of both fetch&merge. pull the files from LocalRepository to WorkingRepository in a single step.
 
 	git pull 				: 	LocalRepository -> WorkingRepository
+	
 	
 .gitignore:	Concept to ignore the unrequired files for this we need create gitignore file and need to add the files init.
 	1.	filename
@@ -158,6 +162,10 @@ Branch: Git branch is nothing but a pointer pointing to separate location.
 	
 	git branch -a: all brances in that Git.
 	
+	git branch --merge : To check wt branches are merged.
+	
+	git branch --no-merge : To check wt branches are not merged yet.
+	
 	git branch branchname:	Creating a new branch with branchname.
 	
 	git checkout branchname	:	Shifting to that branch.
@@ -165,6 +173,8 @@ Branch: Git branch is nothing but a pointer pointing to separate location.
 	git checkout -b branchname : Create & shift at a command.
 	
 	git branch -d branchname : Deleting a branch.
+	
+	git branch NewBranch TrackingNewBranch : To Create a new branch in local that exist in trackingbranch.
 	
 	git merge branchname : merging a branch into other main branch.
 	
@@ -180,9 +190,7 @@ Merge: Commanly there are two types of merge.
 	
 	
 	
-	git branch --merge : To check wt branches are merged.
-	
-	git branch --no-merge : To check wt branches are not merged yet.
+
 	
 	
 -----------------------------------------------------------------------------------------------------------------------
