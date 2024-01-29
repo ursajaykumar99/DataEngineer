@@ -190,7 +190,23 @@ Merge: Commanly there are two types of merge.
 	
 	
 	
+Rebase:	Rebasing the ParentBranch Commit.
 
+	
+	Before Rebasing:
+
+	
+		ParentBranch:	A --> B --> c --> F --> G --> I
+									 \ 
+		childBranch	:				  D --> E --> H
+						
+	
+	After Rebasing:
+	
+		
+		ParentBranch :	A --> B --> c --> F --> G --> I
+													   \
+		childBranch	 :									D --> E --> H
 	
 	
 -----------------------------------------------------------------------------------------------------------------------
