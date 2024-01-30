@@ -211,14 +211,38 @@ Rebase:	Rebasing the ParentBranch Commit.
 	
 -----------------------------------------------------------------------------------------------------------------------
 	
+Stash	:	Stashing is the concept of the removing the changes of tracking files for temporarly.
+
+
+	git stash list 	: Check the list of stashes.
+
+	git stash push 	: stash the changes till the last committed.
+	
+	git stash pop 	: apply & drop the stash changes to the original files.
+	
+	git stash apply	: it will apply the top stash change from the list but will not drop that stash.
+	
+	git stash drop	: it will drop the stash change from the list.
+	
+	git stash apply stash@{0}	: it will apply the particular stash change.
+	
+	git stash -u push : to stash the untracked file also.
+	
+	git stash branch Newbranchname : To create a new branch from the old last stash.
 	
 	
+	Before stashing:
 	
 	
-
+			A --> B --> C --> E --> F
+						\
+						 D --> G
 	
-
-
-
-
-
+	
+	After stashing:
+	
+			A --> B --> C --> D --> G
+			
+			
+			
+-----------------------------------------------------------------------------------------------------------------------
