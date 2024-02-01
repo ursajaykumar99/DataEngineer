@@ -228,7 +228,7 @@ Stash	:	Stashing is the concept of the removing the changes of tracking files fo
 	
 	git stash -u push : to stash the untracked file also.
 	
-	git stash branch Newbranchname : To create a new branch from the old last stash.
+	CHECK --git stash branch Newbranchname : To create a new branch from the old last stash.
 	
 	
 	Before stashing:
@@ -246,3 +246,49 @@ Stash	:	Stashing is the concept of the removing the changes of tracking files fo
 			
 			
 -----------------------------------------------------------------------------------------------------------------------
+
+clean : Cleaning is the concept the removing the untracked files.
+
+	git clean 	:	Syntax
+	
+			-f	:	Important to specify for forced Cleaning.
+			
+			-d	:	To remove recursively directories.
+			
+			-x	:	Remove the untracked files by .gitignore file also.
+			
+			-n 	: 	--dry-run ( To check what files may delete in operation )
+			
+			
+			
+-----------------------------------------------------------------------------------------------------------------------
+			
+Tag	: 	Tagging to the Particular commitid for Better Understanding Purpose.
+
+	git tab	tagname : To Create a tag at last commit.
+	
+	git tag --list	: To get the list of tags.
+	
+	git tag --list "V15.0.*"	: Get the list of tags Based on Pattern.
+	
+	git tag -a tagname 	: Create a tag along with annotation.
+
+	git tag -d tagname	: Delete a tag.
+	
+	git tag tagname commitid1	: Create a tag at specified commmit.
+	
+	git tag tagname -f commitid2: Update a tag with force from one commit id to another commitid.
+	
+	git diff tag1 tag2 	: Get the difference between the tags.
+	
+	
+	
+	git push origin branchname tagname	: Push a specific tagid to the remote.
+	
+	git push origin branchname --tags	: push all the tags.
+	
+-----------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
