@@ -251,7 +251,7 @@ clean : Cleaning is the concept the removing the untracked files.
 
 	git clean 	:	Syntax
 	
-			-f	:	Important to specify for forced Cleaning.
+			-f	:	Important to specify for forced Cleaning. Removes Non-ignored Untracked Files.
 			
 			-d	:	To remove recursively directories.
 			
@@ -260,6 +260,30 @@ clean : Cleaning is the concept the removing the untracked files.
 			-n 	: 	--dry-run ( To check what files may delete in operation )
 			
 			
+-----------------------------------------------------------------------------------------------------------------------
+Reset:	Removing the Modified files & Commits. 
+		Head will reset to Particular commitid(if Nothing define then last commitid).
+
+	git reset --soft		-- Index will not reset. Changes Available.
+	
+	git reset --medium		-- Index will reset. Changes Available.
+	
+	git reset --hard		-- Index will Reset. Changes will not availble.
+	
+	git reset --option Commitid		-- Head reset to that particular commitid. as per the option Changes&Index will update.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+revert: Reverting the particular commit id changes & with adding extra Commit.
+
+	git revert Head						-- Last commitid chagnes will revert.
+
+	git revert commitid 				-- will revert that particular commitid changes only.
+	
+	git revert commitid1^..commitid2  	-- Inbetween allcommits changes will revert one by one by LIFO.
+	
+	git revert commitidn^.. 			-- Till that commit all the commits will revert.
 			
 -----------------------------------------------------------------------------------------------------------------------
 			
@@ -291,4 +315,4 @@ Tag	: 	Tagging to the Particular commitid for Better Understanding Purpose.
 	
 	
 	
-	
+	 
