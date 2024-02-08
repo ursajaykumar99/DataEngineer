@@ -1,6 +1,6 @@
 /*
 
-GIT:Version control System
+GIT:(Global Information Tracking) Version control System
 
 Types of Repositories:
 

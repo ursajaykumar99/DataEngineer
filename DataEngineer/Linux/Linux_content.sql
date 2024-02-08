@@ -14,7 +14,7 @@ sbin	:	super user executable 	--commands like adding newusers,deleting users.
 root	:	root superuser folder
 dev		:	Device related information
 home	: 	users personal space
-etc		:	all confiquration files
+etc		:	all configuration files
 opt		:	third party apps related information will store here.
 proc	:	process related information
 sys		:	systemInformation
@@ -31,15 +31,18 @@ Basic Commands:
 
 whoami					:	will gives the who are you.
 uname					:	Gives the what it is.
-pwd						:	print working directory 	/* Gives the Current path. */
+pwd						:	Present working directory 	/* Gives the Current path. */
 
-ls						:	list side	/* Gives the all the files list in side by side */
+ls	[Options] [fd]		:	list side	/* Gives the all the files list in side by side */
 ls -l					:	long List   /* GIves the long lost for the all files in that folder */
 stat <filename>			:	/* For Property verification */
 cd <foldername>			:	change ditectory /* To change your directory location for forward this command will help */	
 cd ..					:	/* For one step back position */
 cd <path>				:	/* To move particular speicifed path */
+cd ~					: 	To Move Home Folder
 clear					:	ctrl+l			/* clears the user interface */	
+
+Output > Filename		:	To create a file with the output of the command
  
 touch <filename>		:	/* For creating a new file */
 cat <filename>			:	/* For displayig what is inside of the file */
