@@ -42,6 +42,11 @@ cd <path>				:	/* To move particular speicifed path */
 cd ~					: 	To Move Home Folder
 clear					:	ctrl+l			/* clears the user interface */	
 
+
+FileOperations:
+
+
+
 Output > Filename		:	To create a file with the output of the command
  
 touch <filename>		:	/* For creating a new file */
@@ -68,9 +73,35 @@ less <filename>			:	/* Useful to view the Big file & to find the patterns in it 
 	/pattern  + n		:	Search Pattern from top to down
 	?Pattern  + n 		: 	Search Pattern from down to up
 
+
+
+	
+	
+	
+FolderOperations:	
+	
+	
 mkdir <foldername>		:	Make directory 	/* For creating a new folder */
 rmdir <foldername>		:	Remove directory /* For Deleting the folder if it's empty */
 rm -r <foldername>		:	Recursive		/* For Deleting the folder even if it's having files */
+
+
+
+ProcessOperations:
+
+ps 	:	To List out all the process
+
+top	:	processes runnig by order 
+     i  :	Current running or exit
+     s	:	Change time by seconds
+     k	:	To Kill Process
+
+kill [flag] pid : Kill the process with id
+	-KILL	:
+	-9	:
+
+
+
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -80,9 +111,10 @@ linux File permissions:
 
 	read=4 | write=2 | execute=1
 
+	chmod person+/-rwx Filename
 	chmod +x  <filename>
 	chmod -x  <filename>
-	
+
 	chmod 777 <filename>
 	chmod -R 777 <filename>
 	
